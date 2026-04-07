@@ -54,7 +54,7 @@ The final output includes a fully interactive dashboard showcasing key metrics s
 
 **Raw Data**
 Screenshot:
-![Raw](data\raw\screenshot\raw.png)
+![Raw](data/raw/screenshot/raw.png)
 
 ---
 
@@ -67,7 +67,7 @@ The following cleaning steps are performed to clean the above raw data set to en
 - Ref
 
 Screenshot:
-![Unnecessary_Columns](cleaning\screenshot\extra_columns.png)
+![Unnecessary_Columns](cleaning/screenshot/extra_columns.png)
 
 ---
 
@@ -76,10 +76,10 @@ Screenshot:
 - Fixed sequence (1–20 continuous)
 
 Screenshot:
-![Date_Cleaning_1](cleaning\screenshot\rank_duplicate_1.png)
+![Date_Cleaning_1](cleaning/screenshot/rank_duplicate_1.png)
 
 Screenshot:
-![Date_Cleaning_2](cleaning\screenshot\rank_duplicate_2.png)
+![Date_Cleaning_2](cleaning/screenshot/rank_duplicate_2.png)
 
 
 
@@ -95,10 +95,10 @@ Steps performed:
 - Converted to numeric
 
 Screenshot:
-![Date_Cleaning_1](cleaning\screenshot\gross_number.png)
+![Date_Cleaning_1](cleaning/screenshot/gross_number.png)
 
 Screenshot:
-![Date_Cleaning_2](cleaning\screenshot\gross_footnotes.png)
+![Date_Cleaning_2](cleaning/screenshot/gross_footnotes.png)
 
 ---
 
@@ -110,7 +110,7 @@ Steps performed:
 - Removed commas
 
 Screenshot:
-![Date_Cleaning_1](cleaning\screenshot\adjusted_Gross_number.png)
+![Date_Cleaning_1](cleaning/screenshot/adjusted_Gross_number.png)
 
 ---
 
@@ -122,7 +122,7 @@ Removed symbols using Find & Replace:
 - [4], [a], [21]
 
 Screenshot:
-![Fixed_Casing](cleaning\screenshot\tourtitle_symbol.png)
+![Fixed_Casing](cleaning/screenshot/tourtitle_symbol.png)
 
 ---
 
@@ -131,26 +131,26 @@ Screenshot:
 2012 → 2012–2012
 
 Screenshot:
-![Handling_Domain_Errors](Analysis\screenshot\year_range.png)
+![Handling_Domain_Errors](Analysis/screenshot/year_range.png)
 
 ##### Created new columns:
 - Start_Year
 
 Screenshot:
-![Start_Year](Analysis\screenshot\start_year.png)
+![Start_Year](Analysis/screenshot/start_year.png)
 
 - End_Year
 
 Screenshot:
-![End_Year](Analysis\screenshot\end_year_1.png)
+![End_Year](Analysis/screenshot/end_year_1.png)
 
 - Converted to numeric
 
 Screenshot:
-![Start_Year](cleaning\screenshot\start_year_value.png)
+![Start_Year](cleaning/screenshot/start_year_value.png)
 
 Screenshot:
-![End_Year](cleaning\screenshot\end_year_value.png)
+![End_Year](cleaning/screenshot/end_year_value.png)
 
 ---
 
@@ -173,7 +173,7 @@ Screenshot:
 
 **Clean Data**
 Screenshot:
-![clean](data\clean\screenshot\clean_1.png)
+![clean](data/clean/screenshot/clean_1.png)
 
 ---
 
@@ -183,12 +183,12 @@ Screenshot:
 - Tour Duration
 
 Screenshot:
-![Duration](Analysis\screenshot\tour_duration.png)
+![Duration](Analysis/screenshot/tour_duration.png)
 
 - Revenue per Show
 
 Screenshot:
-![revenue/Show](Analysis\screenshot\revenue_per_show.png)
+![revenue/Show](Analysis/screenshot/revenue_per_show.png)
 
 ---
 
@@ -269,7 +269,7 @@ Visualized Insights by creating Pivot Charts from above Pivot Tables created
 ---
 
 Dashboard Screenshot:
-![Dashboard](dashboard\screenshot\dashboard.png)
+![Dashboard](dashboard/screenshot/dashboard.png)
 
 ---
 
