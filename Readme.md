@@ -189,6 +189,7 @@ Screenshot:
 
 ##### Created new columns:
 - Start_Year USING FORMULA:
+
 **Formula:**
 ```excel
 = LEFT(H2,4)
@@ -197,7 +198,12 @@ Screenshot:
 Screenshot:
 ![Start_Year](Analysis/screenshot/start_year.png)
 
-- End_Year
+- End_Year USING FORMULA:
+
+**Formula:**
+```excel
+= IF(ISNUMBER(FIND("–",H2)),RIGHT(H2,4),H2)
+````
 
 Screenshot:
 ![End_Year](Analysis/screenshot/end_year_1.png)
