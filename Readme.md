@@ -188,7 +188,11 @@ Screenshot:
 ![Handling_Domain_Errors](Analysis/screenshot/year_range.png)
 
 ##### Created new columns:
-- Start_Year
+- Start_Year USING FORMULA:
+**Formula:**
+```excel
+= LEFT(H2,4)
+````
 
 Screenshot:
 ![Start_Year](Analysis/screenshot/start_year.png)
