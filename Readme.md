@@ -264,7 +264,12 @@ Screenshot:
 Screenshot:
 ![Duration](Analysis/screenshot/tour_duration.png)
 
-- Revenue per Show
+- Revenue per Show USING FORMULA:
+
+**Formula:**
+```excel
+= B2/H4
+````
 
 Screenshot:
 ![revenue/Show](Analysis/screenshot/revenue_per_show.png)
