@@ -28,6 +28,52 @@ The final output includes a fully interactive dashboard showcasing key metrics s
 
 ---
 
+START ─────────────────────────────────────────────
+
+Tour Revenue Analysis Dashboard/
+│
+├── Analysis/
+│   └── Screenshot/
+│       ├── end_year_1.png
+│       ├── revenue_per_show.png
+│       ├── start_year.png
+│       ├── tour_duration.png
+│       └── year_range.png
+│
+├── Cleaning/
+│   └── Screenshot/
+│       ├── adjusted_Gross_number.png
+│       ├── average_gross_number.png
+│       ├── end_year_value.png
+│       ├── extra_columns.png
+│       ├── gross_footnotes.png
+│       ├── gross_number.png
+│       ├── rank_duplicate_1.png
+│       ├── rank_duplicate_2.png
+│       ├── start_year_trim.png
+│       ├── start_year_value.png
+│       ├── tour_title_trim.png
+│       └── tourtitle_symbol.png
+│
+├── Dashboard/
+│   └── Screenshot/
+│       └── dashboard.png
+│
+├── Data/
+│   ├── Clean/
+│   │   └── Screenshot/
+│   │       ├── clean.png
+│   │       ├── clean_1.png
+│   │       └── rank_duolicate.png
+│   │
+│   └── Raw/
+│       └── Screenshot/
+│           └── raw.png
+│
+└── README.md
+
+END ─────────────────────────────────────────────
+
 ## 📂 Dataset Information
 - Source: Kaggle
 - Dataset Name: Dirty Dataset for Data Cleaning Practice
