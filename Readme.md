@@ -176,8 +176,12 @@ Screenshot:
 
 ---
 
-#### 5. Years Column Transformation
-##### Converted single year to range:
+#### 6. Years Column Transformation
+##### Converted single year to range using formula:
+**Formula:**
+```excel
+= IF(ISNUMBER(FIND("_",H2)),H2,H2&"_"&H2)
+````
 2012 → 2012–2012
 
 Screenshot:
