@@ -218,6 +218,11 @@ Screenshot:
 Screenshot:
 ![Start_Year](cleaning/screenshot/start_year_value.png)
 
+**Formula:**
+```excel
+= VALUE(J2)
+````
+
 Screenshot:
 ![End_Year](cleaning/screenshot/end_year_value.png)
 
