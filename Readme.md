@@ -254,7 +254,12 @@ Screenshot:
 ## Step 3. ⚙️ Preparing for Analysis
 ---
 ### ➕ Dataset Enhancement by adding Helper Columns
-- Tour Duration
+- Tour Duration USING FORMULA:
+
+**Formula:**
+```excel
+= G2 - F2 + 1
+````
 
 Screenshot:
 ![Duration](Analysis/screenshot/tour_duration.png)
