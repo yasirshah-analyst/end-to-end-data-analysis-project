@@ -28,6 +28,9 @@ The final output includes a fully interactive dashboard showcasing key metrics s
 
 ---
 
+## 📁 Project Structure
+
+```text
 START ─────────────────────────────────────────────
 
 Tour Revenue Analysis Dashboard/
@@ -73,6 +76,7 @@ Tour Revenue Analysis Dashboard/
 └── README.md
 
 END ─────────────────────────────────────────────
+```
 
 ## 📂 Dataset Information
 - Source: Kaggle
