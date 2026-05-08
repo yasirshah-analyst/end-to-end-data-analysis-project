@@ -180,7 +180,7 @@ Screenshot:
 ##### Converted single year to range using formula:
 **Formula:**
 ```excel
-= IF(ISNUMBER(FIND("_",H2)),H2,H2&"_"&H2)
+= IF(ISNUMBER(FIND("–",H2)),H2,H2&"–"&H2)
 ````
 2012 → 2012–2012
 
