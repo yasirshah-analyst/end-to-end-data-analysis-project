@@ -208,7 +208,12 @@ Screenshot:
 Screenshot:
 ![End_Year](Analysis/screenshot/end_year_1.png)
 
-- Converted to numeric
+- Converted to numeric USING FORMULA:
+
+**Formula:**
+```excel
+= VALUE(I2)
+````
 
 Screenshot:
 ![Start_Year](cleaning/screenshot/start_year_value.png)
