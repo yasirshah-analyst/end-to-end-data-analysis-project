@@ -407,14 +407,21 @@ Dashboard Screenshot:
 ## 🚀 Conclusion
 
 This project demonstrates strong skills in:
-
 - Data cleaning
 - Data transformation
 - Excel-based analysis
 - Dashboard creation
 
-It highlights how raw, messy data can be turned into valuable insights through structured processing.
+It highlights how raw, messy data can be turned into valuable, quantified insights through a structured, repeatable process.
 
 ---
 
+## 👤 Author
+
+**Yasir Shah**
+- GitHub: [@yasirshah-analyst](https://github.com/yasirshah-analyst)
+- www.linkedin.com/in/yasir-shah-2364183b3
+- shahyasir443@gmail.com
+
+---
 
