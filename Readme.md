@@ -19,6 +19,53 @@ The final output includes a fully interactive dashboard showcasing key metrics s
 
 ---
 
+## 🔎 Data Analysis Process
+
+This project follows a structured 6-phase data analysis workflow:
+
+### 1️⃣ Ask
+Defined the business questions this analysis aims to answer:
+- Which artists/tours generate the highest revenue?
+- Does the number of shows correlate with total revenue?
+- How has tour revenue changed over time?
+- Which artists earn the most per show (efficiency vs. volume)?
+
+### 2️⃣ Prepare
+- Sourced the dataset from Kaggle: *Dirty Dataset for Data Cleaning Practice*
+- Reviewed data structure, column types, and license (CC0: Public Domain)
+- Identified known data quality issues before starting cleaning (see "Issues in Raw Data" below)
+
+### 3️⃣ Process (Data Cleaning)
+- Removed unnecessary columns (`Peak`, `All Time Peak`, `Ref`)
+- Fixed duplicate/broken values in the `Rank` column
+- Cleaned currency symbols, commas, and footnotes from `Actual_Gross` and `Adjusted_Gross`
+- Removed special symbols (†, ‡, *) from `Tour_Title`
+- Standardized the `Years` column into `Start_Year` / `End_Year`, converted to numeric
+- Verified no remaining nulls, duplicates, or text-as-number fields before moving to analysis
+
+### 4️⃣ Analyze
+- Added helper columns: `Tour_Duration`, `Revenue_per_Show`
+- Built PivotTables to answer each business question:
+  - Top Earning Artists
+  - Top Tours
+  - Shows vs Revenue
+  - Revenue Over Time
+  - Average Gross Comparison
+- Cross-checked pivot table outputs against raw totals to confirm accuracy
+
+### 5️⃣ Share
+- Visualized each PivotTable using Pivot Charts
+- Combined all charts into a single interactive Excel dashboard with KPIs, trend charts, and slicers (Artist, Year)
+- Documented every cleaning and analysis step with screenshots for transparency and reproducibility
+
+### 6️⃣ Act (Insights & Recommendations)
+- Highlighted top-performing artists/tours to inform where future scheduling or investment focus could go
+- Identified whether high-revenue tours rely on volume (more shows) or premium pricing (higher revenue/show)
+- Surfaced year-over-year revenue trends to flag growth or decline periods worth investigating further
+
+---
+
+
 ## 🛠 Tools Used
 - Excel
 - Pivot Tables
@@ -30,22 +77,20 @@ The final output includes a fully interactive dashboard showcasing key metrics s
 
 ## 📁 Project Structure
 
-```text
-START ─────────────────────────────────────────────
-
-Tour Revenue Analysis Dashboard/
+```
+end-to-end-data-analysis-project/
 │
-├── Analysis/
-│   └── Screenshot/
+├── analysis/
+│   └── screenshot/
 │       ├── end_year_1.png
 │       ├── revenue_per_show.png
 │       ├── start_year.png
 │       ├── tour_duration.png
 │       └── year_range.png
 │
-├── Cleaning/
-│   └── Screenshot/
-│       ├── adjusted_Gross_number.png
+├── cleaning/
+│   └── screenshot/
+│       ├── adjusted_gross_number.png
 │       ├── average_gross_number.png
 │       ├── end_year_value.png
 │       ├── extra_columns.png
@@ -58,24 +103,26 @@ Tour Revenue Analysis Dashboard/
 │       ├── tour_title_trim.png
 │       └── tourtitle_symbol.png
 │
-├── Dashboard/
-│   └── Screenshot/
+├── dashboard/
+│   └── screenshot/
 │       └── dashboard.png
 │
-├── Data/
-│   ├── Clean/
-│   │   └── Screenshot/
-│   │       ├── clean.png
-│   │       ├── clean_1.png
-│   │       └── rank_duolicate.png
+├── data/
+│   ├── raw/
+│   │   ├── files/
+│   │   │   └── concert_tour_raw.csv
+│   │   └── screenshot/
+│   │       └── raw.png
 │   │
-│   └── Raw/
-│       └── Screenshot/
-│           └── raw.png
+│   └── clean/
+│       ├── files/
+│       │   └── concert_tour_clean.xlsx
+│       └── screenshot/
+│           ├── clean.png
+│           ├── clean_1.png
+│           └── rank_duplicate.png
 │
 └── README.md
-
-END ─────────────────────────────────────────────
 ```
 
 ## 📂 Dataset Information
@@ -91,13 +138,12 @@ END ─────────────────────────�
 ---
 ### Step 1: Bringing Data
 ⚠️ Issues in Raw Data
-- Duplicate value in Rank column
+- Duplicate value in `Rank` column
 - Broken ranking sequence
 - Currency symbols ($) and commas in numeric columns
-- Footnotes like [x], [b], [e]
+- Footnotes like `[x]`, `[b]`, `[e]`
 - Special symbols (†, ‡, *) in text fields
 - Inconsistent Year formats (single year vs range)
-- Formatting Issues
 - Numeric columns stored as text
 
 ---
@@ -326,10 +372,11 @@ Visualized Insights by creating Pivot Charts from above Pivot Tables created
 
 #### 💡 Key Insights Generated
 
-- Revenue strongly correlates with number of shows
-- Some artists generate higher revenue per show despite fewer performances
-- Revenue trends show growth over recent years
-- Top tours contribute a major portion of total revenue
+- Revenue is concentrated in a small number of top artists — the top 5 account for roughly **85 %** of total revenue in the dataset
+- The single highest-grossing tour was "The Eras Tour", generating **$780000000**
+- More shows does not reliably mean more revenue — e.g. "The Eras Tour" had fewer shows but higher total revenue than "Living Proof:    The Farewell Tour" which had most shows
+- Revenue peaked in 2023 and was lowest in 2006
+- "Taylor Swift" was the single highest overall earner  at **$1526075146** in total gross revenue
 
 ---
 
