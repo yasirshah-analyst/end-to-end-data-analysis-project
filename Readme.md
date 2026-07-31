@@ -148,9 +148,9 @@ end-to-end-data-analysis-project/
 
 ---
 
-**Raw Data**
-Screenshot:
-![Raw](data/raw/screenshot/raw.png)
+**View Screenshot**
+
+[Raw Dataset](data/raw/screenshot/raw.png)
 
 ---
 
@@ -162,8 +162,9 @@ The following cleaning steps are performed to clean the above raw data set to en
 - All Time Peak
 - Ref
 
-Screenshot:
-![Unnecessary_Columns](cleaning/screenshot/extra_columns.png)
+**View Screenshot**
+
+[Removing Unnecessary_Columns](cleaning/screenshot/extra_columns.png)
 
 ---
 
@@ -171,13 +172,11 @@ Screenshot:
 - Removed duplicate value (7 → corrected to 8)
 - Fixed sequence (1–20 continuous)
 
-Screenshot:
-![Date_Cleaning_1](cleaning/screenshot/rank_duplicate_1.png)
+**View Screenshot**
 
-Screenshot:
-![Date_Cleaning_2](cleaning/screenshot/rank_duplicate_2.png)
+[Rank Column Fix_1](cleaning/screenshot/rank_duplicate_1.png)
 
-
+[Rank Column Fix_2](cleaning/screenshot/rank_duplicate_2.png)
 
 ---
 
@@ -190,11 +189,11 @@ Steps performed:
 - Removed footnotes [b], [e]
 - Converted to numeric
 
-Screenshot:
-![Date_Cleaning_1](cleaning/screenshot/gross_number.png)
+**View Screenshot**
 
-Screenshot:
-![Date_Cleaning_2](cleaning/screenshot/gross_footnotes.png)
+[Date_Cleaning_1](cleaning/screenshot/gross_number.png
+
+[Date_Cleaning_2](cleaning/screenshot/gross_footnotes.png)
 
 ---
 
