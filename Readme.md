@@ -191,9 +191,9 @@ Steps performed:
 
 **View Screenshot**
 
-[Date_Cleaning_1](cleaning/screenshot/gross_number.png)
+[Removing footnotes](cleaning/screenshot/gross_footnotes.png)
 
-[Date_Cleaning_2](cleaning/screenshot/gross_footnotes.png)
+[Converting to numeric](cleaning/screenshot/gross_number.png)
 
 ---
 
@@ -204,8 +204,9 @@ Steps performed:
 - Removed $ using Find & Replace
 - Removed commas
 
-Screenshot:
-![Date_Cleaning_1](cleaning/screenshot/adjusted_Gross_number.png)
+**View Screenshot**
+
+[Adjusting_Gross](cleaning/screenshot/adjusted_Gross_number.png)
 
 ---
 
@@ -216,7 +217,8 @@ Removed symbols using Find & Replace:
 - †, ‡, *
 - [4], [a], [21]
 
-Screenshot:
+**View Screenshot**
+
 ![Fixed_Casing](cleaning/screenshot/tourtitle_symbol.png)
 
 ---
