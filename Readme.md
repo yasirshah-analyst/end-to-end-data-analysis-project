@@ -219,7 +219,7 @@ Removed symbols using Find & Replace:
 
 **View Screenshot**
 
-![Fixed_Casing](cleaning/screenshot/tourtitle_symbol.png)
+[Removing Unwanted Symbols](cleaning/screenshot/tourtitle_symbol.png)
 
 ---
 
@@ -231,8 +231,9 @@ Removed symbols using Find & Replace:
 ````
 2012 → 2012–2012
 
-Screenshot:
-![Handling_Domain_Errors](Analysis/screenshot/year_range.png)
+**View Screenshot**
+
+[Single Year to Range](Analysis/screenshot/year_range.png)
 
 ##### Created new columns:
 - Start_Year USING FORMULA:
@@ -242,8 +243,9 @@ Screenshot:
 = LEFT(H2,4)
 ````
 
-Screenshot:
-![Start_Year](Analysis/screenshot/start_year.png)
+**View Screenshot**
+
+[Start_Year](Analysis/screenshot/start_year.png)
 
 - End_Year USING FORMULA:
 
@@ -252,8 +254,9 @@ Screenshot:
 = IF(ISNUMBER(FIND("–",H2)),RIGHT(H2,4),H2)
 ````
 
-Screenshot:
-![End_Year](Analysis/screenshot/end_year_1.png)
+**View Screenshot**
+
+[End_Year](Analysis/screenshot/end_year_1.png)
 
 - Converted to numeric USING FORMULA:
 
@@ -262,16 +265,18 @@ Screenshot:
 = VALUE(I2)
 ````
 
-Screenshot:
-![Start_Year](cleaning/screenshot/start_year_value.png)
+**View Screenshot**
+
+[Converting Start Year to numeric](cleaning/screenshot/start_year_value.png)
 
 **Formula:**
 ```excel
 = VALUE(J2)
 ````
 
-Screenshot:
-![End_Year](cleaning/screenshot/end_year_value.png)
+**View Screenshot**
+
+[Converting End Year to numeric](cleaning/screenshot/end_year_value.png)
 
 ---
 
