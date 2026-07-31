@@ -191,7 +191,7 @@ Steps performed:
 
 **View Screenshot**
 
-[Date_Cleaning_1](cleaning/screenshot/gross_number.png
+[Date_Cleaning_1](cleaning/screenshot/gross_number.png)
 
 [Date_Cleaning_2](cleaning/screenshot/gross_footnotes.png)
 
