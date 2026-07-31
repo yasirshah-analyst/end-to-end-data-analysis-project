@@ -297,9 +297,9 @@ Removed symbols using Find & Replace:
 - Adjusted_Gross
 - Avg_Gross
 
-**Clean Data**
-Screenshot:
-![clean](data/clean/screenshot/clean_1.png)
+**View Screenshot**
+
+[clean Dataset](data/clean/screenshot/clean_1.png)
 
 ---
 
@@ -313,8 +313,9 @@ Screenshot:
 = G2 - F2 + 1
 ````
 
-Screenshot:
-![Duration](Analysis/screenshot/tour_duration.png)
+**View Screenshot**
+
+[Tour Duration](Analysis/screenshot/tour_duration.png)
 
 - Revenue per Show USING FORMULA:
 
@@ -323,8 +324,9 @@ Screenshot:
 = B2/H4
 ````
 
-Screenshot:
-![revenue/Show](Analysis/screenshot/revenue_per_show.png)
+**View Screenshot**
+
+[Revenue/Show](Analysis/screenshot/revenue_per_show.png)
 
 ---
 
