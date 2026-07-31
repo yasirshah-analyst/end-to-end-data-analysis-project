@@ -9,6 +9,12 @@ The final output includes a fully interactive dashboard showcasing key metrics s
 
 ---
 
+## 🎯 Business Problem
+ 
+*(Simulated scenario — the dataset is a public Kaggle practice dataset, but the project is framed the way a real stakeholder request would be.)*
+ 
+A concert promotion agency wants to understand which artists and tours have historically generated the most revenue, whether more shows actually translates to more revenue, and how revenue has trended over time — to guide future booking decisions.
+
 ## 🎯 Project Objectives
 - Clean and standardize a messy dataset
 - Handle missing values, duplicates, and formatting issues
@@ -19,53 +25,6 @@ The final output includes a fully interactive dashboard showcasing key metrics s
 
 ---
 
-## 🔎 Data Analysis Process
-
-This project follows a structured 6-phase data analysis workflow:
-
-### 1️⃣ Ask
-Defined the business questions this analysis aims to answer:
-- Which artists/tours generate the highest revenue?
-- Does the number of shows correlate with total revenue?
-- How has tour revenue changed over time?
-- Which artists earn the most per show (efficiency vs. volume)?
-
-### 2️⃣ Prepare
-- Sourced the dataset from Kaggle: *Dirty Dataset for Data Cleaning Practice*
-- Reviewed data structure, column types, and license (CC0: Public Domain)
-- Identified known data quality issues before starting cleaning (see "Issues in Raw Data" below)
-
-### 3️⃣ Process (Data Cleaning)
-- Removed unnecessary columns (`Peak`, `All Time Peak`, `Ref`)
-- Fixed duplicate/broken values in the `Rank` column
-- Cleaned currency symbols, commas, and footnotes from `Actual_Gross` and `Adjusted_Gross`
-- Removed special symbols (†, ‡, *) from `Tour_Title`
-- Standardized the `Years` column into `Start_Year` / `End_Year`, converted to numeric
-- Verified no remaining nulls, duplicates, or text-as-number fields before moving to analysis
-
-### 4️⃣ Analyze
-- Added helper columns: `Tour_Duration`, `Revenue_per_Show`
-- Built PivotTables to answer each business question:
-  - Top Earning Artists
-  - Top Tours
-  - Shows vs Revenue
-  - Revenue Over Time
-  - Average Gross Comparison
-- Cross-checked pivot table outputs against raw totals to confirm accuracy
-
-### 5️⃣ Share
-- Visualized each PivotTable using Pivot Charts
-- Combined all charts into a single interactive Excel dashboard with KPIs, trend charts, and slicers (Artist, Year)
-- Documented every cleaning and analysis step with screenshots for transparency and reproducibility
-
-### 6️⃣ Act (Insights & Recommendations)
-- Highlighted top-performing artists/tours to inform where future scheduling or investment focus could go
-- Identified whether high-revenue tours rely on volume (more shows) or premium pricing (higher revenue/show)
-- Surfaced year-over-year revenue trends to flag growth or decline periods worth investigating further
-
----
-
-
 ## 🛠 Tools Used
 - Excel
 - Pivot Tables
@@ -75,12 +34,41 @@ Defined the business questions this analysis aims to answer:
 
 ---
 
+## 🧭 Workflow
+ 
+```
+Raw Data (Kaggle, messy)
+        │
+        ▼
+ Clean & Format
+ (remove columns, fix rank, strip symbols/footnotes,
+  convert currency text to numbers, split years)
+        │
+        ▼
+ Enhance
+ (Tour_Duration, Revenue_per_Show columns added)
+        │
+        ▼
+ Analyze
+ (PivotTables — top artists, top tours, shows vs revenue,
+  revenue over time, average gross comparison)
+        │
+        ▼
+ Visualize
+ (Pivot Charts + Dashboard with KPIs and slicers)
+        │
+        ▼
+ Insights → Recommendations → Business Impact
+```
+
+---
+
 ## 📁 Project Structure
 
 ```
 end-to-end-data-analysis-project/
 │
-├── analysis/
+├── Analysis/
 │   └── screenshot/
 │       ├── end_year_1.png
 │       ├── revenue_per_show.png
@@ -90,7 +78,7 @@ end-to-end-data-analysis-project/
 │
 ├── cleaning/
 │   └── screenshot/
-│       ├── adjusted_gross_number.png
+│       ├── adjusted_Gross_number.png
 │       ├── average_gross_number.png
 │       ├── end_year_value.png
 │       ├── extra_columns.png
@@ -108,22 +96,20 @@ end-to-end-data-analysis-project/
 │       └── dashboard.png
 │
 ├── data/
-│   ├── raw/
-│   │   ├── files/
-│   │   │   └── concert_tour_raw.csv
+│   ├── clean/
 │   │   └── screenshot/
-│   │       └── raw.png
+│   │       ├── clean.png
+│   │       ├── clean_1.png
+│   │       └── rank_duplicate.png
 │   │
-│   └── clean/
-│       ├── files/
-│       │   └── concert_tour_clean.xlsx
+│   └── raw/
 │       └── screenshot/
-│           ├── clean.png
-│           ├── clean_1.png
-│           └── rank_duplicate.png
+│           └── raw.png
 │
-└── README.md
+└── Readme.md
 ```
+
+---
 
 ## 📂 Dataset Information
 - Source: Kaggle
@@ -330,81 +316,70 @@ Removed symbols using Find & Replace:
 
 ---
 
-### Step 4: Bringing data into a visualization tool
----
-#### 1. Top Earning Artists
-- Rows → Artist
-- Values → Sum of Actual_Gross
-
-👉 Identifies highest revenue-generating artists
-
----
-
-#### 2. Top Tours
-- Rows → Tour_Title
-- Values → Actual_Gross
-
-👉 Shows highest grossing tours
-
----
-
-#### 3. Shows vs Revenue
-- Rows → Shows
-- Values → Actual_Gross
-
-👉 Analyzes relationship between shows and revenue
-
----
-
-#### 4. Revenue Over Time
-- Rows → Start_Year
-- Values → Sum of Actual_Gross
-
-👉 Identifies growth trends
-
----
-
-#### 5. Average Gross Comparison
-- Rows → Artist
-- Values → Avg_Gross
-
-👉 Compares earnings per show
-
----
-
-### Step 5: Visualizing Data by Pivot Charts
-
-Visualized Insights by creating Pivot Charts from above Pivot Tables created
+## Step 4–5: Analyzing and Visualizing with PivotTables & Pivot Charts
+ 
+| Analysis | PivotTable Setup | Purpose |
+|---|---|---|
+| Top Earning Artists | Rows: `Artist` · Values: Sum of `Actual_Gross` | Identifies highest revenue-generating artists |
+| Top Tours | Rows: `Tour_Title` · Values: `Actual_Gross` | Shows highest grossing tours |
+| Shows vs Revenue | Rows: `Shows` · Values: `Actual_Gross` | Analyzes relationship between show count and revenue |
+| Revenue Over Time | Rows: `Start_Year` · Values: Sum of `Actual_Gross` | Identifies growth trends |
+| Average Gross Comparison | Rows: `Artist` · Values: `Avg_Gross` | Compares earnings per show across artists |
+ 
+Pivot Charts were built directly from each of the above PivotTables to visualize the results.
 
 ---
 
 #### 💡 Key Insights Generated
 
-- Revenue is concentrated in a small number of top artists — the top 5 account for roughly **85 %** of total revenue in the dataset
+- **Revenue is not evenly distributed** — a handful of top tours account for a disproportionate share of total revenue.The top 5 account for roughly **85 %** of total revenue in the dataset
 - The single highest-grossing tour was "The Eras Tour", generating **$780000000**
-- More shows does not reliably mean more revenue — e.g. "The Eras Tour" had fewer shows but higher total revenue than "Living Proof:    The Farewell Tour" which had most shows
+- **Some artists generate higher revenue per show despite fewer performances** — total show count alone doesn't determine an artist's revenue efficiency. — e.g. "The Eras Tour" had fewer shows but higher total revenue than "Living Proof:    The Farewell Tour" which had most shows
 - Revenue peaked in 2023 and was lowest in 2006
 - "Taylor Swift" was the single highest overall earner  at **$1526075146** in total gross revenue
 
 ---
 
+## 💡 Recommendations
+ 
+1. **Don't book tours based on show count alone** — since revenue per show varies significantly between artists, prioritize revenue-per-show performance over total shows when planning future bookings.
+2. **Prioritize partnerships with top-revenue tours and artists** identified in the Top Earning Artists and Top Tours analysis.
+3. **Track revenue-per-show as a standing KPI** going forward, not just total revenue, since it more accurately reflects tour efficiency.
+
+---
+
+## 📊 Business Impact
+ 
+If acted on, these recommendations could help a booking/promotion business:
+ 
+- Avoid over-investing in high-show-count tours that don't proportionally return higher revenue
+- Identify and prioritize consistently efficient artists, even those with fewer total tours
+- Make booking decisions grounded in historical revenue-per-show data rather than assumptions about volume
+
+---
+
 ## Step 6: 📈 Dashboard
+ 
 ### 🧾 Layout Structure
-#### 🔷 Top Section (KPIs)
-- Total Revenue
-- Total Shows
-- Number of Artists
-- Average Revenue per Show
-#### 🔷 Middle Section (Charts)
-- Top Artists 
+ 
+**Top Section (KPIs)**
+ 
+| KPI | Value |
+|---|---|
+| Total Revenue | _$ 5,759 M_ |
+| Total Shows | _2200_ |
+| Number of Artists | _09_ |
+| Average Revenue per Show | _$ 3 M_ |
+ 
+**Middle Section (Charts)**
+- Top Artists
 - Revenue Trend
-#### 🔷 Bottom Section (Charts)
+**Bottom Section (Charts)**
 - Top Tours
-- Shows vs Revenue 
-#### 🔷 Side Panel (Slicers)
+- Shows vs Revenue
+**Side Panel (Slicers)**
 - Artist
 - Year
-
 ---
 
 Dashboard Screenshot:
