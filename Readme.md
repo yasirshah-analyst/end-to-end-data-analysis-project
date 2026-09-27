@@ -1,4 +1,4 @@
-# 🎵 Concert Tour Data Cleaning & Analysis (Excel Project)
+# 🎵 From Show Count to Revenue: Identifying What Drives Concert Tour Performance
 
 ## Executive Summary
 
@@ -43,18 +43,6 @@ Dashboard Screenshot:
 
 
 ## 🧭 Methodology
-
-This project focuses on cleaning and analyzing a messy concert tour dataset to extract meaningful business insights. The dataset was transformed from a raw, inconsistent format into a structured and analysis-ready dataset using Excel.
-
-The final output includes a fully interactive dashboard showcasing key metrics such as revenue trends, top artists, and performance analysis.
-
-### 🎯 Project Objectives
-- Clean and standardize a messy dataset
-- Handle missing values, duplicates, and formatting issues
-- Transform raw data into structured format
-- Perform exploratory data analysis (EDA)
-- Build an interactive Excel dashboard
-- Generate actionable insights
 
 ### Workflow
 
@@ -227,7 +215,7 @@ Removed symbols using Find & Replace:
 
 ### Step 3: ⚙️ Preparing for Analysis
 
-### ➕ Dataset Enhancement by adding Helper Columns
+#### ➕ Dataset Enhancement by adding Helper Columns
 - Tour Duration USING FORMULA:
 
 **Formula:**
@@ -262,16 +250,6 @@ Removed symbols using Find & Replace:
 
 Pivot Charts were built directly from each of the above PivotTables to visualize the results.
 
-### 🚀 Conclusion
-
-This project demonstrates strong skills in:
-- Data cleaning
-- Data transformation
-- Excel-based analysis
-- Dashboard creation
-
-It highlights how raw, messy data can be turned into valuable, quantified insights through a structured, repeatable process.
-
 ---
 
 ## 📂 Dataset
@@ -281,8 +259,6 @@ It highlights how raw, messy data can be turned into valuable, quantified insigh
 - Link: https://www.kaggle.com/datasets/amruthayenikonda/dirty-dataset-to-practice-data-cleaning
 - Description: A purposely messy dataset containing concert tour data, designed for practicing data cleaning skills. It includes inconsistencies such as  symbols, missing values, incorrect formats, and duplicate rankings.
 - License: CC0: Public Domain
-
-Rank sequence runs 1–20 (one duplicate rank value was found and corrected during cleaning — see Methodology).
 
 ### Clean Dataset Columns:
 - Rank
