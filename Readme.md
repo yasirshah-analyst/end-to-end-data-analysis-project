@@ -1,21 +1,54 @@
 # 🎵 Concert Tour Data Cleaning & Analysis (Excel Project)
 
+## Executive Summary
 
-## 📌 Project Overview
+### Business Question
+
+A concert promotion agency wants to understand which artists and tours have historically generated the most revenue, whether more shows actually translates to more revenue, and how revenue has trended over time — to guide future booking decisions.
+
+### Trade-offs & Assumptions
+
+*(Simulated scenario — the dataset is a public Kaggle practice dataset, but the project is framed the way a real stakeholder request would be.)*
+
+### Key Insights
+
+- **Revenue is not evenly distributed** — a handful of top tours account for a disproportionate share of total revenue.The top 5 account for roughly **85 %** of total revenue in the dataset
+- The single highest-grossing tour was "The Eras Tour", generating **$780000000**
+- **Some artists generate higher revenue per show despite fewer performances** — total show count alone doesn't determine an artist's revenue efficiency. — e.g. "The Eras Tour" had fewer shows but higher total revenue than "Living Proof:    The Farewell Tour" which had most shows
+- Revenue peaked in 2023 and was lowest in 2006
+- "Taylor Swift" was the single highest overall earner  at **$1526075146** in total gross revenue
+
+### Recommendations
+
+1. **Don't book tours based on show count alone** — since revenue per show varies significantly between artists, prioritize revenue-per-show performance over total shows when planning future bookings.
+2. **Prioritize partnerships with top-revenue tours and artists** identified in the Top Earning Artists and Top Tours analysis.
+3. **Track revenue-per-show as a standing KPI** going forward, not just total revenue, since it more accurately reflects tour efficiency.
+
+### Business Impact
+
+If acted on, these recommendations could help a booking/promotion business:
+
+- Avoid over-investing in high-show-count tours that don't proportionally return higher revenue
+- Identify and prioritize consistently efficient artists, even those with fewer total tours
+- Make booking decisions grounded in historical revenue-per-show data rather than assumptions about volume
+
+---
+
+## 📈 Dashboard
+
+Dashboard Screenshot:
+![Dashboard](dashboard/screenshot/dashboard.png)
+
+---
+
+
+## 🧭 Methodology
 
 This project focuses on cleaning and analyzing a messy concert tour dataset to extract meaningful business insights. The dataset was transformed from a raw, inconsistent format into a structured and analysis-ready dataset using Excel.
 
 The final output includes a fully interactive dashboard showcasing key metrics such as revenue trends, top artists, and performance analysis.
 
----
-
-## 🎯 Business Problem
- 
-*(Simulated scenario — the dataset is a public Kaggle practice dataset, but the project is framed the way a real stakeholder request would be.)*
- 
-A concert promotion agency wants to understand which artists and tours have historically generated the most revenue, whether more shows actually translates to more revenue, and how revenue has trended over time — to guide future booking decisions.
-
-## 🎯 Project Objectives
+### 🎯 Project Objectives
 - Clean and standardize a messy dataset
 - Handle missing values, duplicates, and formatting issues
 - Transform raw data into structured format
@@ -23,19 +56,8 @@ A concert promotion agency wants to understand which artists and tours have hist
 - Build an interactive Excel dashboard
 - Generate actionable insights
 
----
+### Workflow
 
-## 🛠 Tools Used
-- Excel
-- Pivot Tables
-- Excel Formulas (VALUE, IF, LEFT, RIGHT)
-- Data Cleaning Techniques
-- Data Visualization (Charts & Dashboard)
-
----
-
-## 🧭 Workflow
- 
 ```
 Raw Data (Kaggle, messy)
         │
@@ -61,68 +83,8 @@ Raw Data (Kaggle, messy)
  Insights → Recommendations → Business Impact
 ```
 
----
-
-## 📁 Project Structure
-
-```
-end-to-end-data-analysis-project/
-│
-├── Analysis/
-│   └── screenshot/
-│       ├── end_year_1.png
-│       ├── revenue_per_show.png
-│       ├── start_year.png
-│       ├── tour_duration.png
-│       └── year_range.png
-│
-├── cleaning/
-│   └── screenshot/
-│       ├── adjusted_Gross_number.png
-│       ├── average_gross_number.png
-│       ├── end_year_value.png
-│       ├── extra_columns.png
-│       ├── gross_footnotes.png
-│       ├── gross_number.png
-│       ├── rank_duplicate_1.png
-│       ├── rank_duplicate_2.png
-│       ├── start_year_trim.png
-│       ├── start_year_value.png
-│       ├── tour_title_trim.png
-│       └── tourtitle_symbol.png
-│
-├── dashboard/
-│   └── screenshot/
-│       └── dashboard.png
-│
-├── data/
-│   ├── clean/
-│   │   └── screenshot/
-│   │       ├── clean.png
-│   │       ├── clean_1.png
-│   │       └── rank_duplicate.png
-│   │
-│   └── raw/
-│       └── screenshot/
-│           └── raw.png
-│
-└── Readme.md
-```
-
----
-
-## 📂 Dataset Information
-- Source: Kaggle
-- Dataset Name: Dirty Dataset for Data Cleaning Practice
-- Link: https://www.kaggle.com/datasets/amruthayenikonda/dirty-dataset-to-practice-data-cleaning
-- Description: A purposely messy dataset containing concert tour data, designed for practicing data cleaning skills. It includes inconsistencies such as  symbols, missing values, incorrect formats, and duplicate rankings.
-- License: CC0: Public Domain
-
----
-
-## Full Data Analytics Pipeline
----
 ### Step 1: Bringing Data
+
 ⚠️ Issues in Raw Data
 - Duplicate value in `Rank` column
 - Broken ranking sequence
@@ -132,15 +94,12 @@ end-to-end-data-analysis-project/
 - Inconsistent Year formats (single year vs range)
 - Numeric columns stored as text
 
----
-
 **View Screenshot**
 
 [Raw Dataset](data/raw/screenshot/raw.png)
 
----
-
 ### Step 2: Data Cleaning and Formatting
+
 The following cleaning steps are performed to clean the above raw data set to ensure data accuracy and consistency.
 
 #### 1. Remove Unnecessary Columns
@@ -264,33 +223,10 @@ Removed symbols using Find & Replace:
 
 [Converting End Year to numeric](cleaning/screenshot/end_year_value.png)
 
----
-
 ##### Removed original Years column and additional range column
 
----
+### Step 3: ⚙️ Preparing for Analysis
 
-
----
-## Clean Dataset Columns:
-- Rank
-- Artist
-- Tour_Title
-- Start_Year
-- End_Year
-- Shows
-- Actual_Gross
-- Adjusted_Gross
-- Avg_Gross
-
-**View Screenshot**
-
-[clean Dataset](data/clean/screenshot/clean_1.png)
-
----
-
-## Step 3. ⚙️ Preparing for Analysis
----
 ### ➕ Dataset Enhancement by adding Helper Columns
 - Tour Duration USING FORMULA:
 
@@ -314,10 +250,8 @@ Removed symbols using Find & Replace:
 
 [Revenue/Show](Analysis/screenshot/revenue_per_show.png)
 
----
+### Step 4–5: Analyzing and Visualizing with PivotTables & Pivot Charts
 
-## Step 4–5: Analyzing and Visualizing with PivotTables & Pivot Charts
- 
 | Analysis | PivotTable Setup | Purpose |
 |---|---|---|
 | Top Earning Artists | Rows: `Artist` · Values: Sum of `Actual_Gross` | Identifies highest revenue-generating artists |
@@ -325,69 +259,10 @@ Removed symbols using Find & Replace:
 | Shows vs Revenue | Rows: `Shows` · Values: `Actual_Gross` | Analyzes relationship between show count and revenue |
 | Revenue Over Time | Rows: `Start_Year` · Values: Sum of `Actual_Gross` | Identifies growth trends |
 | Average Gross Comparison | Rows: `Artist` · Values: `Avg_Gross` | Compares earnings per show across artists |
- 
+
 Pivot Charts were built directly from each of the above PivotTables to visualize the results.
 
----
-
-#### 💡 Key Insights Generated
-
-- **Revenue is not evenly distributed** — a handful of top tours account for a disproportionate share of total revenue.The top 5 account for roughly **85 %** of total revenue in the dataset
-- The single highest-grossing tour was "The Eras Tour", generating **$780000000**
-- **Some artists generate higher revenue per show despite fewer performances** — total show count alone doesn't determine an artist's revenue efficiency. — e.g. "The Eras Tour" had fewer shows but higher total revenue than "Living Proof:    The Farewell Tour" which had most shows
-- Revenue peaked in 2023 and was lowest in 2006
-- "Taylor Swift" was the single highest overall earner  at **$1526075146** in total gross revenue
-
----
-
-## 💡 Recommendations
- 
-1. **Don't book tours based on show count alone** — since revenue per show varies significantly between artists, prioritize revenue-per-show performance over total shows when planning future bookings.
-2. **Prioritize partnerships with top-revenue tours and artists** identified in the Top Earning Artists and Top Tours analysis.
-3. **Track revenue-per-show as a standing KPI** going forward, not just total revenue, since it more accurately reflects tour efficiency.
-
----
-
-## 📊 Business Impact
- 
-If acted on, these recommendations could help a booking/promotion business:
- 
-- Avoid over-investing in high-show-count tours that don't proportionally return higher revenue
-- Identify and prioritize consistently efficient artists, even those with fewer total tours
-- Make booking decisions grounded in historical revenue-per-show data rather than assumptions about volume
-
----
-
-## Step 6: 📈 Dashboard
- 
-### 🧾 Layout Structure
- 
-**Top Section (KPIs)**
- 
-| KPI | Value |
-|---|---|
-| Total Revenue | _$ 5,759 M_ |
-| Total Shows | _2200_ |
-| Number of Artists | _09_ |
-| Average Revenue per Show | _$ 3 M_ |
- 
-**Middle Section (Charts)**
-- Top Artists
-- Revenue Trend
-**Bottom Section (Charts)**
-- Top Tours
-- Shows vs Revenue
-**Side Panel (Slicers)**
-- Artist
-- Year
----
-
-Dashboard Screenshot:
-![Dashboard](dashboard/screenshot/dashboard.png)
-
----
-
-## 🚀 Conclusion
+### 🚀 Conclusion
 
 This project demonstrates strong skills in:
 - Data cleaning
@@ -399,12 +274,94 @@ It highlights how raw, messy data can be turned into valuable, quantified insigh
 
 ---
 
+## 📂 Dataset
+
+- Source: Kaggle
+- Dataset Name: Dirty Dataset for Data Cleaning Practice
+- Link: https://www.kaggle.com/datasets/amruthayenikonda/dirty-dataset-to-practice-data-cleaning
+- Description: A purposely messy dataset containing concert tour data, designed for practicing data cleaning skills. It includes inconsistencies such as  symbols, missing values, incorrect formats, and duplicate rankings.
+- License: CC0: Public Domain
+
+Rank sequence runs 1–20 (one duplicate rank value was found and corrected during cleaning — see Methodology).
+
+### Clean Dataset Columns:
+- Rank
+- Artist
+- Tour_Title
+- Start_Year
+- End_Year
+- Shows
+- Actual_Gross
+- Adjusted_Gross
+- Avg_Gross
+
+**View Screenshot**
+
+[clean Dataset](data/clean/screenshot/clean_1.png)
+
+---
+
+
+## 🛠 Tools Used
+- Excel
+- Pivot Tables
+- Excel Formulas (VALUE, IF, LEFT, RIGHT)
+- Data Cleaning Techniques
+- Data Visualization (Charts & Dashboard)
+
+---
+
+## 📁 Project Structure
+
+```
+end-to-end-data-analysis-project/
+│
+├── Analysis/
+│   └── screenshot/
+│       ├── end_year_1.png
+│       ├── revenue_per_show.png
+│       ├── start_year.png
+│       ├── tour_duration.png
+│       └── year_range.png
+│
+├── cleaning/
+│   └── screenshot/
+│       ├── adjusted_Gross_number.png
+│       ├── average_gross_number.png
+│       ├── end_year_value.png
+│       ├── extra_columns.png
+│       ├── gross_footnotes.png
+│       ├── gross_number.png
+│       ├── rank_duplicate_1.png
+│       ├── rank_duplicate_2.png
+│       ├── start_year_trim.png
+│       ├── start_year_value.png
+│       ├── tour_title_trim.png
+│       └── tourtitle_symbol.png
+│
+├── dashboard/
+│   └── screenshot/
+│       └── dashboard.png
+│
+├── data/
+│   ├── clean/
+│   │   └── screenshot/
+│   │       ├── clean.png
+│   │       ├── clean_1.png
+│   │       └── rank_duplicate.png
+│   │
+│   └── raw/
+│       └── screenshot/
+│           └── raw.png
+│
+└── Readme.md
+```
+
+---
+
 ## 👤 Author
 
 **Yasir Shah**
 - GitHub: [@yasirshah-analyst](https://github.com/yasirshah-analyst)
 - www.linkedin.com/in/yasir-shah-2364183b3
 - shahyasir443@gmail.com
-
----
-
